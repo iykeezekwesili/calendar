@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<title></title>
+
+<link rel="stylesheet" href="plugins/bootstrap.min.css">
+<script src="plugins/bootstrap.min.js"></script>
+<script src="plugins/jquery-3.6.1.min.js"></script>
+<script src="plugins/all.min.js"></script>
+
+<style>
+	table{
+		width: 100%;
+		text-align: center;
+	}
+	
+	table thead{
+		background: orange;
+		color:black;
+	}
+	
+	caption{
+		background-color: gray;
+		color: white;
+		font-size: 1.2em;
+	}
+	
+	.hello{
+	    background: #7b00ff;
+	    color: #32ff15;
+	}
+	
+	td{
+		background: black !importan;
+	}
+</style>
+</head>
+<body>
+    <h1 class="hello">From a new editor</h1>
+	<h1 class="text-primary bg-danger">Hello World</h1>
+	<i class="fab fa-facebook fa-4x" ></i>
+	
+	<table class="table table-striped table-bordered table-hover" >
+		<caption style="text-align:center; caption-side:top;" >Today</caption>
+		<thead>
+		<tr>
+			<th>Sun</th>
+			<th>Mon</th>
+			<th>Tue</th>
+			<th>Wed</th>
+			<th>Thu</th>
+			<th>Fri</th>
+			<th>Sat</th>
+		</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	
+	<script>
+		var monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+		var dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+		var tbody = $("tbody")
+		
+		//$(document).ready(function(){
+			setInterval(function(){
+				var date = new Date()
+				var year = date.getFullYear()
+				var month = date.getMonth()
+				var day = date.getDay()
+				var tempDate = new Date(year, month)
+				var monthStartDay = tempDate.getDay()
+				var totalDays = new Date(year, month+1,0)
+				totalDays = totalDays.getDate()
+			
+				tbody.children().remove()
+			
+				for (i=1; i<=6; i++){
+					var tr = $("<tr></tr>")
+				
+					for (k=1; k<=7; k++){
+						var td = $("<td></td>").text("")
+						tr.append(td)
+					}
+				
+					tbody.append(tr)
+				}
+			
+				var count = 1
+				
+				for (i = monthStartDay; i <= totalDays + monthStartDay - 1; i++){
+					$("tbody td").eq(i).text(count++)
+				}
+				
+				$("tbody td")
+					.eq(date.getDate() + monthStartDay-1).addClass("today")
+					.css({
+						background:"red",
+						color:"white",
+						fontWeight:"bold",
+						borderRadius: "50%"
+					})
+				
+				for(i=5; i>=0; i--){
+				var td = tbody.find("tr").eq(i).children()
+				
+				if (td.eq(6).text() == ""){
+				td.eq(6).parent().remove()
+				}
+				
+				}
+				
+					
+				var tableCaption = document.querySelector("caption")
+				tableCaption.textContent = dayNames[day] + ", " + date.getDate() + " " + monthNames[month] + " " + year
+			}, 500)
+		//})
+		
+		/*setTimeout(function(){
+			for(i=5; i>=0; i--){
+				var td = tbody.find("tr").eq(i).children()
+				
+				if (td.eq(6).text() == ""){
+					td.eq(6).parent().remove()
+				}
+				
+			}
+		}, 1200)*/
+	</script>
+</body>
+</html>
