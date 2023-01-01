@@ -35,7 +35,7 @@ var monthNames = ["January","February","March","April","May","June","July","Augu
 					.eq(date.getDate() + monthStartDay-1)
 					.addClass("today")
 				
-				for(i=5; i>=0; i--){
+				for(i=5; i>=4; i--){
 					var td = tbody.find("tr").eq(i).children()
 				
 					if (td.eq(0).text() == ""){
