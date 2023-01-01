@@ -36,11 +36,11 @@ var monthNames = ["January","February","March","April","May","June","July","Augu
 					.addClass("today")
 				
 				for(i=5; i>=0; i--){
-				var td = tbody.find("tr").eq(i).children()
+					var td = tbody.find("tr").eq(i).children()
 				
-				if (td.eq(6).text() == ""){
-				td.eq(6).parent().remove()
-				}
+					if (td.eq(0).text() == ""){
+						td.parent().remove()
+					}
 				
 				}
 				
