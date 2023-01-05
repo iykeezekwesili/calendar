@@ -1,34 +1,161 @@
 table{
-	width: 100%;
 	text-align: center;
+	border: solid 1px;
 }
-	
-table thead{
-	background: rgba(255,0,0,1);
-	color: white;
+
+th, td{
+	padding: 10px;
 }
 	
 caption{
-	background-color: gray;
-	color: white;
 	font-size: 1.2em;
-}
-
-tbody td{
-	color: red;
-}
-	
-tbody tr:nth-child(2n-1){
-	background: rgba(255,0,0,0.1);
-}
-	
-tbody tr:nth-child(2n){
-	background: rgba(255,0,0,0.2);
+	text-align: center;
+	caption-side: top;
 }
 
 td.today{
 	background: white;
 	color: black;
 	font-weight: bold;
-	border: solid 1px red;
+	borde: solid 1px black !important;
+	box-shadow: 3px,3px,1px,3px,black;
+}
+
+/** RED THEME CALENDAR STYLE **/
+.red{
+	border-color: red;
+}
+
+.red caption{
+	background: black;
+	color: white;
+}
+	
+.red thead{
+	background: red;
+	color: white;
+}
+
+.red tbody td{
+	color: red;
+}
+	
+.red tbody tr:nth-child(2n-1){
+	background: rgba(255,0,0,0.1);
+}
+	
+.red tbody tr:nth-child(2n){
+	background: rgba(255,0,0,0.2);
+}
+
+
+/** BLUE THEME CALENDAR STYLE **/
+.blue{
+	border-color: blue;
+}
+
+.blue caption{
+	background: black;
+	color: white;
+}
+	
+.blue thead{
+	background: blue;
+	color: white;
+}
+
+.blue tbody td{
+	color: blue;
+}
+	
+.blue tbody tr:nth-child(2n-1){
+	background: rgba(0,0,255,0.1);
+}
+	
+.blue tbody tr:nth-child(2n){
+	background: rgba(0,0,255,0.2);
+}
+
+
+/** GREEN THEME CALENDAR STYLE **/
+.green{
+	border-color: #006600;
+}
+
+.green caption{
+	background: black;
+	color: white;
+}
+	
+.green thead{
+	background: #006600;
+	color: white;
+}
+
+.green tbody td{
+	color: #006600;
+}
+	
+.green tbody tr:nth-child(2n-1){
+	background: rgba(0,120,0,0.1);
+}
+	
+.green tbody tr:nth-child(2n){
+	background: rgba(0,120,0,0.2);
+}
+
+/** PURPLE THEME CALENDAR STYLE **/
+.purple{
+	border-color: #800080;
+}
+
+.purple caption{
+	background: black;
+	color: white;
+}
+	
+.purple thead{
+	background: #800080;
+	color: white;
+}
+
+.purple tbody td{
+	color: #800080;
+}
+	
+.purple tbody tr:nth-child(2n-1){
+	background: rgba(128,0,128,0.1);
+}
+	
+.purple tbody tr:nth-child(2n){
+	background: rgba(128,0,128,0.2);
+}
+
+
+
+/** ORANGE THEME CALENDAR STYLE **/
+.orange{
+	border-color: #e67300;
+}
+
+.orange caption{
+	background: black;
+	color: white;
+}
+	
+.orange thead{
+	background: #e67300;
+	color: white;
+}
+
+.orange tbody td{
+	color: #e67300;
+}
+	
+.orange tbody tr:nth-child(2n-1){
+	background: rgba(230, 115, 0, 0.1);
+}
+	
+.orange tbody tr:nth-child(2n){
+	background: rgba(230, 115, 0, 0.2);
 }
