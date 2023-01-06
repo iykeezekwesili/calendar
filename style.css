@@ -40,11 +40,11 @@ td.today{
 	color: red;
 }
 	
-.red tbody tr:nth-child(2n-1){
+.red tbody tr:nth-child(odd){
 	background: rgba(255,0,0,0.1);
 }
 	
-.red tbody tr:nth-child(2n){
+.red tbody tr:nth-child(even-1-){
 	background: rgba(255,0,0,0.2);
 }
 
@@ -68,11 +68,11 @@ td.today{
 	color: blue;
 }
 	
-.blue tbody tr:nth-child(2n-1){
+.blue tbody tr:nth-child(odd){
 	background: rgba(0,0,255,0.1);
 }
 	
-.blue tbody tr:nth-child(2n){
+.blue tbody tr:nth-child(even){
 	background: rgba(0,0,255,0.2);
 }
 
@@ -96,11 +96,11 @@ td.today{
 	color: #006600;
 }
 	
-.green tbody tr:nth-child(2n-1){
+.green tbody tr:nth-child(odd){
 	background: rgba(0,120,0,0.1);
 }
 	
-.green tbody tr:nth-child(2n){
+.green tbody tr:nth-child(even){
 	background: rgba(0,120,0,0.2);
 }
 
@@ -123,11 +123,11 @@ td.today{
 	color: #800080;
 }
 	
-.purple tbody tr:nth-child(2n-1){
+.purple tbody tr:nth-child(odd){
 	background: rgba(128,0,128,0.1);
 }
 	
-.purple tbody tr:nth-child(2n){
+.purple tbody tr:nth-child(even){
 	background: rgba(128,0,128,0.2);
 }
 
@@ -152,10 +152,10 @@ td.today{
 	color: #e67300;
 }
 	
-.orange tbody tr:nth-child(2n-1){
+.orange tbody tr:nth-child(odd){
 	background: rgba(230, 115, 0, 0.1);
 }
 	
-.orange tbody tr:nth-child(2n){
+.orange tbody tr:nth-child(even){
 	background: rgba(230, 115, 0, 0.2);
 }
